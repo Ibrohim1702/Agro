@@ -1,0 +1,24 @@
+{% extends 'dashboard/base.html' %}
+{% block title %} Add product list | Product qo'shish listi {% endblock %}
+{% block content %}
+
+<div class="col-md-6">
+    <div class="card">
+        <form method="post">
+            {% csrf_token %}
+            <div class="card-header text-center">
+                <h4 class="card-title">
+                    <b> Add Product Form </b>
+                </h4>
+            </div>
+            <div class="card-content">
+                {{ forms.as_p }}
+            </div>
+            <div class="card-footer text-center">
+                <button type="submit" class="btn btn-info btn-fill btn-wd">Add product</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

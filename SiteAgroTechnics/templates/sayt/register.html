@@ -1,0 +1,58 @@
+{% extends 'sayt/base.html' %}
+{% block content %}
+{% load static %}
+    <div class="future other reg">
+        <div class="container">
+            <div class="registr_bl">
+                <ul>
+                    <li class="active"><a href="#">Авторизация</a></li>
+                    <li><a href="#">Регистрация</a></li>
+                </ul>
+                <div class="main_tab">
+                    <div id="avt" class="tab_item active">
+                        <div class="overlay"></div>
+                       <form method="post">
+                           {% csrf_token %}
+                           <div class="form_group">
+                               <label for="#">Username</label>
+                               <input type="text" name="username" placeholder="eshmatjon">
+                           </div>
+                           <div class="form_group">
+                               <label for="#">Password</label>
+                               <input type="password" name="password" placeholder="************">
+                           </div>
+                           {% if error %}
+                                <h3 style="background-color:red;">Parol yoki Login xato</h3>
+                           {% endif %}
+                           <button type="submit">Войти</button> 
+                       </form>
+                    </div>
+                    <div id="reg" class="tab_item ">
+                        <div class="overlay"></div>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form_group">
+                               <label for="#">Ваше имя </label>
+                               <input type="text" name="name" placeholder="name">
+                            </div>
+                            <div class="form_group">
+                               <label for="#">Имя пользователя</label>
+                               <input type="text" name="username" placeholder="username">
+                            </div>
+                            <div class="form_group">
+                               <label for="#">Пароль</label>
+                               <input type="password" name="password" placeholder="********">
+                            </div>
+                            <div class="form_group">
+                               <label for="#">Пароль конфирмация</label>
+                               <input type="password" name="password_conf" placeholder="********">
+                            </div>
+                           <button type="submit">Войти</button> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

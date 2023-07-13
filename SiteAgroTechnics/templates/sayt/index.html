@@ -1,0 +1,249 @@
+{% extends 'sayt/base.html' %}
+{% block content %}
+{% load static %}
+    <div class="future">
+        <div class="container">
+            <div class="bl_search">
+                <form action="{% url 'category' %}" method="get" class=" d-flex">
+                    <input type="text" name="search" placeholder="Введите слово для поиска">
+
+                    <button type="submit">НАЙТИ</button>
+                </form>
+                <div class="subregions">
+                    <div class="first-table" id="first-table">
+                        <div class="subtitle">
+                            <a class="whole-country" href="#!">Весь Узбекистан</a>
+                        </div>
+                        <ul class="">
+                            <li class=""><a href="#!">Андижанская область</a></li>
+                            <li class=""><a href="#!">Бухарская область</a></li>
+                            <li class=""><a href="#!">Джизакская область</a></li>
+                            <li class=""><a href="#!">Каракалпакстан</a></li>
+                            <li class=""><a href="#!">Кашкадарьинская область</a></li>
+                            <li class=""><a href="#!">Навоийская область</a></li>
+                            <li class=""><a href="#!">Наманганская область</a></li>
+                            <li class=""><a href="#!">Самаркандская область</a></li>
+                            <li class=""><a href="#!">Сурхандарьинская область</a></li>
+                            <li class=""><a href="#!">Сырдарьинская область</a></li>
+                            <li class=""><a href="#!">Ташкентская область</a></li>
+                            <li class=""><a href="#!">Ферганская область</a></li>
+                            <li class=""><a href="#!">Хорезмская область</a></li>
+                        </ul>
+                    </div>
+                    <div class="minicities" id="minicities">
+                        <div class="d-flex justify-content-between subtitle">
+                            <p class="back-to-region">Изменить регион</p>
+                            <p class="along-region text-right"><a href="#!">Искать по всему региону</a></p>
+                        </div>
+                        <ul>
+                            <li><a href="#!">Акалтын</a></li>
+                            <li><a href="#!">Алтынкуль</a></li>
+                            <li><a href="#!">Андижан</a></li>
+                            <li><a href="#!">Асака</a></li>
+                            <li><a href="#!">Ахунбабаев</a></li>
+                            <li><a href="#!">Балыкчи</a></li>
+                            <li><a href="#!">Боз</a></li>
+                            <li><a href="#!">Булакбаши</a></li>
+                            <li><a href="#!">Карасу</a></li>
+                            <li class=""><a href="#!">Куйганъяр</a></li>
+                            <li class=""><a href="#!">Кургантепа</a></li>
+                            <li><a href="#!">Мархамат</a></li>
+                            <li><a href="#!">Пайтуг</a></li>
+                            <li><a href="#!">Пахтаабад</a></li>
+                            <li><a href="#!">Шахрихан</a></li>
+                            <li><a href="#!">Ханабад</a></li>
+                            <li><a href="#!">Ходжаабад</a></li>
+                        </ul>
+                    </div>
+                    <span class="close-button">+</span>
+                </div>
+            </div>
+        </div>
+        <div class="my_carousel owl-carousel">
+            <div class="item">
+                <div class="bc_item" style="background-image: url({% static 'images/fish.png' %});"></div>
+                <a href="#" class="title_item">
+                    Семена, саженцы и посевные 
+                </a>
+                <ul>
+                    <li><a href="#">Зарыбок  ∙  1</a></li>
+                    <li><a href="#">Морская рыба  ∙  1</a></li>
+                    <li><a href="#">Речная рыба  ∙  2</a></li>
+                </ul>
+                <a href="#" class="to_catalog">Перейти в каталог</a>
+            </div>
+            <div class="item">
+                <div class="bc_item" style="background-image: url({% static 'images/trava.png' %});"></div>
+                <a href="#" class="title_item">
+                    Семена, саженцы и посевные
+                </a>
+                <ul>
+                    <li><a href="#">Зарыбок  ∙  1</a></li>
+                    <li><a href="#">Морская рыба  ∙  1</a></li>
+                    <li><a href="#">Речная рыба  ∙  2</a></li>
+                </ul>
+                <a href="#" class="to_catalog">Перейти в каталог</a>
+            </div>
+            <div class="item">
+                <div class="bc_item" style="background-image: url({% static 'images/chicken.png' %});"></div>
+                <a href="#" class="title_item">
+                    Семена, саженцы и посевные
+                </a>
+                <ul>
+                    <li><a href="#">Зарыбок  ∙  1</a></li>
+                    <li><a href="#">Морская рыба  ∙  1</a></li>
+                    <li><a href="#">Речная рыба  ∙  2</a></li>
+                </ul>
+                <a href="#" class="to_catalog">Перейти в каталог</a>
+            </div>
+            <div class="item">
+                <div class="bc_item" style="background-image: url({% static 'images/Polifoska_1.png' %});"></div>
+                <a href="#" class="title_item">
+                    Семена, саженцы и посевные
+                </a>
+                <ul>
+                    <li><a href="#">Зарыбок  ∙  1</a></li>
+                    <li><a href="#">Морская рыба  ∙  1</a></li>
+                    <li><a href="#">Речная рыба  ∙  2</a></li>
+                </ul>
+                <a href="#" class="to_catalog">Перейти в каталог</a>
+            </div>
+            <div class="item">
+                <div class="bc_item" style="background-image: url({% static 'images/gov2.png' %});"></div>
+                <a href="#" class="title_item">
+                    Семена, саженцы и посевные
+                </a>
+                <ul>
+                    <li><a href="#">Зарыбок  ∙  1</a></li>
+                    <li><a href="#">Морская рыба  ∙  1</a></li>
+                    <li><a href="#">Речная рыба  ∙  2</a></li>
+                </ul>
+                <a href="#" class="to_catalog">Перейти в каталог</a>
+            </div>
+            <div class="item">
+                <div class="bc_item" style="background-image: url({% static 'images/fish.png' %});"></div>
+                <a href="#" class="title_item">
+                    Семена, саженцы и посевные
+                </a>
+                <ul>
+                    <li><a href="#">Зарыбок  ∙  1</a></li>
+                    <li><a href="#">Морская рыба  ∙  1</a></li>
+                    <li><a href="#">Речная рыба  ∙  2</a></li>
+                </ul>
+                <a href="#" class="to_catalog">Перейти в каталог</a>
+            </div>
+            <div class="item">
+                <div class="bc_item" style="background-image: url({% static 'images/fish.png' %});"></div>
+                <a href="#" class="title_item">
+                    Семена, саженцы и посевные
+                </a>
+                <ul>
+                    <li><a href="#">Зарыбок  ∙  1</a></li>
+                    <li><a href="#">Морская рыба  ∙  1</a></li>
+                    <li><a href="#">Речная рыба  ∙  2</a></li>
+                </ul>
+                <a href="#" class="to_catalog">Перейти в каталог</a>
+            </div>
+        </div>
+    </div>
+    <div class="it_work">
+        <div class="container">
+            <h2 class="title_md">Как работает торговая площадка AGRO Uzbekistan?</h2>
+            <div class="row">
+                <div class="col-lg-4 d-flex align-items-center">
+                    <div class="work_text_left">
+                        <h2>1</h2>
+                    </div>
+                    <div class="work_text_right d-flex flex-column justify-content-between">
+                        <h4>Добавьте свою компанию</h4>
+                        <div class="hov">
+                            <p class="no_hover">
+                                и вы легко сможете продавать их не только на местном рынке, но и экспортировать. Так как мы рекламируем ваши товары и услуги на весь мир
+                            </p>
+                            <div class="has_hover">
+                                <a href="#">добавить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center">
+                    <div class="work_text_left">
+                        <h2>2</h2>
+                    </div>
+                    <div class="work_text_right d-flex flex-column justify-content-between">
+                        <h4>Разместите ваши Товары и услуги</h4>
+                        <div class="hov">
+                            <p class="no_hover">
+                                и вы легко сможете продавать их не только на местном рынке, но и экспортировать. Так как мы рекламируем ваши товары и услуги на весь мир
+                            </p>
+                            <div class="has_hover">
+                                <a href="#">добавить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center">
+                    <div class="work_text_left">
+                        <h2>3</h2>
+                    </div>
+                    <div class="work_text_right d-flex flex-column justify-content-between">
+                        <h4>Закупайте Все что вы желаете.</h4>
+                        <div class="hov">
+                            <p class="no_hover">
+                                В разделе закупки/спросы вы можете закупать любой товар или услугу. Не вы будете искать товары, а покупатели сами найдут вас!
+                            </p>
+                            <div class="has_hover">
+                                <a href="#">добавить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <div class="last_updates">
+        <div class="container">
+            <h2 class="title_md">Последние объявления</h2>
+            <div class="card_main">
+                {% for i in prod %}
+                    <div class="card">
+                        {% for j in data %}
+                            {% if i.id == j.id %}
+                                <a href="{% url 'views' pk=i.id %}" class="card_img_top" style="background-image: url({{ j.img.img.url }});"></a>
+                            {% endif %}
+                        {% endfor %}
+                      <div class="card_body">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="#" class="card_title">{{ i.price }}</a>
+                            <a href="#" class="star_act"><i class="fas fa-star"></i><i class="far fa-star"></i></a>
+                        </div>
+                        <a href="#" class="card-text">{{ i.compain }}</a>
+                        <a href="{% url 'views' pk=i.pk %}" class="adress_pr"><img src="{% static 'images/map_mar.png' %}" alt="">{{ i.vil }}</a>
+                      </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="about_benefits">
+        <div class="container">
+            <h2 class="title_md">Коротко о преимуществах</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>У каждого сельскохозяйственного производителя немало хлопот. Кроме круглогодичной заботы о растениях, животных, встают проблемы с реализацией выращенной продукции.</p> 
+                    <p>Специфика этих товаров заключается в необходимости срочной реализации, где отлично может помочь торговая площадка а именно доска объявлений.  Не всегда удается оперативно найти покупателя, выгодно продать товар. Наша доска агро объявлений Узбекистана поможет каждому аграрию и сельскому хозяйству максимально быстро продать свою продукцию.  Поиск покупателей и продавцов не требует затрат времени. Войти в интернет, найти партнера, совершить сделку, можно дома, в дороге, офисе. Конечно, наша агродоска не единственная в сети, но наш сайт обеспечивает своим пользователям ряд преимуществ. </p>
+                </div>
+                <div class="col-lg-6">
+                    <p>- высокая посещаемость,  многочисленные просмотры ваших объявлений;<br>  - возможность добавлять компании;  удобный рубрикатор;  <br>
+                    - разместить агро объявление можно бесплатно и без регистрации;  <br>
+                    - 1 минута! (столько нужно времени чтобы дать объявление); <br>
+                    - агро объявления публикуются моментально;  <br>
+                    - оптимизация ваших объявлений (вывод в топ 10 Google и Яндекс);  <br>
+                    - постоянные советы и рекомендации по улучшению качества и видимости; <br>- Эффективность агро объявлений </p>
+                    <p>Для того чтобы обеспечить сельскохозяйственному объявлению должную эффективность нужно указать в описании всю необходимую информацию о продукте или услуге, дополнить текст фотографией или видеороликом что значительно увеличивает кликабельность вашего объявления. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

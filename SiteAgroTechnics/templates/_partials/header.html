@@ -1,0 +1,28 @@
+{% load static %}
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-xs-6 col-6">
+                 <a href="{% url 'home' %}" class="logo">
+                    <img src="{% static 'images/logo.png' %}" alt="">
+                </a>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 d-flex align-items-center justify-content-between mob_menu">
+                <ul class="nav">
+
+                    {% for i in ctgs %}
+                        <li><a href="{% url 'category' slug=i.slug %}">{{ i.content }}</a></li>
+                    {% endfor %}
+
+                </ul>
+                <a href="{% url 'search' %}" class="add_advert"><img src="{% static 'images/plus_circle.png' %}" alt="">Добавить объявление</a>
+                <a href="{% url 'register' %}" class="add_advert"><img src="{% static 'images/user.png' %}" alt="">Вход / Регистрация</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>

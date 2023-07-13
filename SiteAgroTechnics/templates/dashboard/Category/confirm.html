@@ -1,0 +1,25 @@
+{% extends 'dashboard/base.html' %}
+{% block title %} Category | Delete-Confirm {% endblock %}
+
+{% block content %}
+
+    <h3> Siz rostdan ham {{ root.content }} ni o'chirmoqchimisiz</h3>
+
+    <a href="{% url 'dashboard-ctg-delete' pk=root.id %}">
+        <button type="button" class="btn btn-wd btn-fill btn-danger">
+            <span class="btn-label">
+                <i class="ti-trash"></i>
+            </span>
+            Yes
+        </button>
+    </a>
+    <a href="{% url 'dashboard-ctg-list' %}">
+        <button type="button" class="btn btn-wd btn-fill btn-success">
+            <span class="btn-label">
+                <i class="ti-check"></i>
+            </span>
+            No
+        </button>
+    </a>
+
+{% endblock %}

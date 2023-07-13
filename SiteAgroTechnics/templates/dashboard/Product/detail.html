@@ -1,0 +1,124 @@
+{% extends 'dashboard/base.html' %}
+{% block title %}Category | List{% endblock %}
+{% load static %}
+{% block content %}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">{{ pro.compain }}</h4>
+            <p class="category">Bu yerda <b>{{ pro.compain }}</b> kategoriyasi bilan tanishishingiz mumkin!</p>
+        </div>
+        <div class="card-content table-responsive table-full-width">
+            <table class="table table-hover">
+            <thead>
+                <th><b>Key</b></th>
+                <th><b>Value</b></th>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td><b>ID</b></td>
+                    <td>{{ pro.id }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Compain</b></td>
+                    <td>{{ pro.compain }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Price</b></td>
+                    <td>{{ pro.price }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Hudud</b></td>
+                    <td>{{ pro.vil }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Sana</b></td>
+                    <td>{{ pro.date }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Mahsulot haqida</b></td>
+                    <td>{{ pro.short_description }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Quvvati</b></td>
+                    <td>{{ pro.quvvati }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Silindr</b></td>
+                    <td>{{ pro.silindr }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Uzatmalar qutisi</b></td>
+                    <td>{{ pro.karobka }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Tezlik</b></td>
+                    <td>{{ pro.tezlik }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>G'ildirak</b></td>
+                    <td>{{ pro.gildirak }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Yoqilg'i sarfi</b></td>
+                    <td>{{ pro.yoqilgi }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Uzunlik</b></td>
+                    <td>{{ pro.uzunlik }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Kenglik</b></td>
+                    <td>{{ pro.kenglik }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Tepalik</b></td>
+                    <td>{{ pro.tepalik }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Tkumlyator</b></td>
+                    <td>{{ pro.akumlyator }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Tepalik</b></td>
+                    <td>{{ pro.tepalik }}</td>
+                </tr>
+                <tr class="">
+                    <td><b>Telefon</b></td>
+                    <td>{{ pro.telefon }}</td>
+                </tr>
+
+
+
+            </tbody>
+        </table>
+        </div>
+        <a href="{% url 'dashboard-pro-edit' pk=pro.id %}">
+            <button type="button" class="btn btn-wd btn-info btn-fill btn-rotate">
+                <span class="btn-label">
+                    <i class="ti-pencil-alt"></i>
+                </span>
+                Edit
+            </button>
+        </a>
+        <a href="{% url 'dashboard-pro-delete' pk=pro.id %}">
+            <button type="button" class="btn btn-wd btn-danger btn-fill btn-rotate">
+                <span class="btn-label">
+                    <i class="ti-trash"></i>
+                </span>
+                Delete
+            </button>
+        </a>
+        <a href="{% url 'dashboard-pro-list' %}">
+        <button type="button" class="btn btn-wd btn-success btn-fill btn-move-left">
+            <span class="btn-label">
+                <i class="ti-angle-left"></i>
+            </span>
+            Back page
+        </button>
+        </a>
+    </div>
+</div>
+{% endblock %}
+

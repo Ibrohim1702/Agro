@@ -1,0 +1,61 @@
+{% extends 'dashboard/base.html' %}
+{% block title %}Category | List{% endblock %}
+{% load static %}
+{% block content %}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">{{ ctg.content }}</h4>
+            <p class="category">Bu yerda <b>{{ ctg.content }}</b> kategoriyasi bilan tanishishingiz mumkin!</p>
+        </div>
+        <div class="card-content table-responsive table-full-width">
+            <table class="table table-hover">
+            <thead>
+                <th><b>Key</b></th>
+                <th><b>Value</b></th>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td>ID</td>
+                    <td>{{ ctg.id }}</td>
+                </tr>
+                <tr class="">
+                    <td>Content</td>
+                    <td>{{ ctg.content }}</td>
+                </tr>
+                <tr class="">
+                    <td>Slug</td>
+                    <td>{{ ctg.slug }}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <a href="{% url 'dashboard-ctg-edit' pk=ctg.id %}">
+            <button type="button" class="btn btn-wd btn-info btn-fill btn-rotate">
+                <span class="btn-label">
+                    <i class="ti-pencil-alt"></i>
+                </span>
+                Edit
+            </button>
+        </a>
+        <a href="{% url 'dashboard-ctg-confirm' pk=ctg.id %}">
+            <button type="button" class="btn btn-wd btn-danger btn-fill btn-rotate">
+                <span class="btn-label">
+                    <i class="ti-trash"></i>
+                </span>
+                Delete
+            </button>
+        </a>
+        <a href="{% url 'dashboard-ctg-list' %}">
+        <button type="button" class="btn btn-wd btn-success btn-fill btn-move-left">
+            <span class="btn-label">
+                <i class="ti-angle-left"></i>
+            </span>
+            Back page
+        </button>
+        </a>
+    </div>
+</div>
+{% endblock %}
+

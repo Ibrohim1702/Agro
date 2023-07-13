@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'font/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightslider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+    <title>Agro</title>
+</head>
+<body>
+
+    {% include '_partials/header.html' %}
+    {% block content %} {% endblock %}
+    {% include '_partials/footer.html' %}
+
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/cleave-phone.uz.js' %}"></script>
+    <script src="{% static 'js/cleave.min.js' %}"></script>
+    <script src="{% static 'js/select2.min.js' %}"></script>
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/lightslider.min.js' %}"></script>
+
+    <script>
+
+          $('#imageGallery').lightSlider({
+                gallery:true,
+                item:1,
+                loop: false,
+                thumbItem:6,
+                slideMargin:0,
+                enableDrag: true,
+                currentPagerPosition:'left',
+                onSliderLoad: function(el) {
+                    el.lightGallery({
+                        selector: '#imageGallery .lslide'
+                    });
+                }
+            });
+
+
+    </script>
+</body>
+</html>
